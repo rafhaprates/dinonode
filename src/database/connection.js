@@ -5,6 +5,9 @@ module.exports = function(app) {
         user : 'sa', 
         password : 'sasasa', 
         server : 'localhost', 
-        database : 'node'
+        database : 'mundial_editora',
+        connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
+        multipleStatements : true
     })
+
 }
