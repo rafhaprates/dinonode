@@ -1,8 +1,16 @@
-const sql = require('mssql')
+const { request } = require('../app')
+const connectionVar = require('../database/connection')
 
-const connStr = "Server=localhost;Database=node;User=sa;Password=sasasa";
+module.exports = function(app) {
 
+app.get('/register', function (req, res) {
+    var connection = connectionVar();
+    console.log("Conectou");
 
-sql.connect(connStr)
-    .then(conn => console.log("Conectou" + conn))
-    .catch(err => console.log("Erro!" + err))
+    request.query('select * from Clientes', function (err, results){
+      res.send({home : results});
+    });
+    connection.close();
+});
+
+}
