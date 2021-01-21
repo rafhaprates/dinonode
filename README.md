@@ -4,10 +4,10 @@
 ## Instalação
 Faça o clone do nosso repositório e utilize os comandos:
 ```sh
-$ git clone https://github.com/Rocketseat/blog-express-middlewares.git
-$ cd blog-express-middlewares
+$ git clone https://github.com/rafhaprates/dinonode.git
+$ cd dinonode
 $ npm install
-$ npm start
+$ yarn dev
 ```
 
 Acesse a página no link: http://localhost:3000
