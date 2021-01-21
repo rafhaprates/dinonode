@@ -1,16 +1,14 @@
 const express = require('express')
-const { celebrate, Segments, Joi } = require('celebrate')
+const RegisterController = require('./controllers/RegisterController') //Declarando o  Register Controller
+const indexController = require('./controllers/indexController') //Declarando o index
+const route = express.Router() //Instaciando o Objeto
+
+//Rota Principal do Main
+route.get('/', indexController.index);
+
+//Adicionado a Rota de Register 
+route.get('/register', RegisterController.index);
 
 
-const RegisterController = require('./controllers/RegisterController')
-
-const route = express.Router()
-
-
-route.get('/', (req, res) => {
-    res.status(202).json({ message: 'Hello Word'});
-});
-
-//routes.get('/register', RegisterController.index );
-
+//Esportantdo a Rota 
 module.exports = route
