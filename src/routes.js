@@ -9,6 +9,5 @@ route.get('/', indexController.index);
 //Adicionado a Rota de Register 
 route.get('/register', RegisterController.index);
 
-
 //Esportantdo a Rota 
 module.exports = route

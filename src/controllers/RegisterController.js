@@ -1,4 +1,3 @@
-const { request } = require('../app')
 const connectionVar = require('../database/connection')
 
  const RegisterController = {
